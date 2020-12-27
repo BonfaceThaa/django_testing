@@ -4,3 +4,4 @@
 # DLLs, binary and modules
 node_modules/
 __pycache__/
+geckodriver.log
