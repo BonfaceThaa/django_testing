@@ -2,7 +2,9 @@ pipeline {
     agent any
     stages {
         stage ("success") {
-            sh "echo success!"
+            step{
+                sh "echo success!"
+            }
         }
     }
 }
