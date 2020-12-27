@@ -3,9 +3,9 @@ pipeline {
     stages {
         stage ("env setup ") {
             steps {
-                sh 'python3 -m venv testEnv'
-                sh 'source testEnv/bin/activate'
-                sh 'pip install -r superlists/requirements.txt'
+                withPythonEnv ("~/envs/djangoTestEnv/bin/python3") {
+                    pysh 'pip install -r superlists/requirements.txt'
+                }
             }
         }
         stage ("run server") {
